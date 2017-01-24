@@ -7,15 +7,27 @@ import {
   Hits,
   Highlight,
   RefinementList,
-  PoweredBy,
   SearchBox,
 } from 'react-instantsearch/dom';
+import { connectCurrentRefinements } from 'react-instantsearch/connectors'
+
 import './Search.css';
 
 const algoliaAppId = 'latency';
 const algoliaIndexName = 'ikea';
 const algoliaAPIKey = '6be0576ff61c053d5f9a3225e2a90f76';
 const attributeToDisplay = 'description';
+
+const ClearAll = connectCurrentRefinements(({ refine, items }) => {
+  return (
+    <button
+      disabled={items.length === 0}
+      className="btn btn-default"
+      onClick={refine.bind(null, items)}
+    >
+      <span className="icon icon-cancel-squared" />
+    </button>)
+})
 
 const Hit = ({ hit }) =>
   <p className="hit">
@@ -86,9 +98,7 @@ class Search extends Component {
               <div className="pane">
                 <header className="toolbar toolbar-header">
                   <div className="toolbar-actions">
-                    <button className="btn btn-default pull-right">
-                      <span className="icon icon-home" />
-                    </button>
+                    <ClearAll />
                   </div>
                 </header>
                 <div className="after-header">

@@ -14,6 +14,18 @@ body {
   border-top: 0
 }
 
+button[type=submit] {
+  display: none;
+}
+
+button[type=reset] {
+  display: none;
+}
+
+button[disabled] {
+  opacity: 0.3;
+}
+
 input.ais-SearchBox__input[type="search"] {
   width: 160px;
   background-color: white;
