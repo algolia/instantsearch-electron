@@ -162,10 +162,14 @@
     "webpack-validator": "^2.3.0"
   },
   "dependencies": {
+    "electron-config": "^0.2.1",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.4",
+    "qs": "^6.3.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-instantsearch": "^2.2.5",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.1",
     "react-router-redux": "^4.0.7",

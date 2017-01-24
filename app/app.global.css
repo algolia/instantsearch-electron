@@ -1,39 +1,75 @@
 @import "~font-awesome/css/font-awesome.css";
 
 body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background-color: #232C39;
-  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5) 10%, rgba(0, 1, 127, .7));
-  font-family: Arial, Helvetica, Helvetica Neue, serif;
-  overflow-y: hidden;
+  font-size: 14px;
 }
 
-h2 {
+.sidebar {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  width: 185px;
+}
+
+.list-group-item {
+  border-top: 0
+}
+
+input.ais-SearchBox__input[type="search"] {
+  width: 160px;
+  background-color: white;
+  outline: 0;
+  color: #444;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.toolbar-actions {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.ais-PoweredBy__root {
+  position: absolute;
+  font-size: 12px;
+  left: 10px;
+  bottom: 5px;
+  color: #aaa;
+}
+
+.hit {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
   margin: 0;
-  font-size: 2.25rem;
-  font-weight: bold;
-  letter-spacing: -.025em;
-  color: #fff;
 }
 
-p {
-  font-size: 24px;
+.ais-Highlight__highlighted {
+  color: red;
+  font-style: normal;
+  background-color: #f5f5f4;
+  text-decoration: underline;
 }
 
-li {
-  list-style: none;
+.ais-RefinementList__item label, .ais-RefinementList__item input {
+  font-size: 12px;
+  color: #666;
 }
-
-a {
-  color: white;
-  opacity: .75;
-  text-decoration: none;
+.ais-RefinementList__itemLabel {
+  margin-left: 5px;
 }
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
+.ais-RefinementList__itemCheckbox {
+  display: inline-block;
+  margin-left: 6px !important;
+}
+.ais-RefinementList__itemCheckbox:focus {
+  outline: 0;
+}
+.ais-RefinementList__itemCount {
+  color: #aaa;
+}
+.ais-RefinementList__itemCount:before {
+  color: #aaa;
+}
+.ais-RefinementList__itemCount:after {
+  color: #aaa;
 }

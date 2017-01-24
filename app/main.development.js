@@ -1,4 +1,7 @@
 import { app, BrowserWindow, Menu, shell } from 'electron';
+import Config from 'electron-config';
+
+const config = new Config();
 
 let menu;
 let template;
@@ -44,10 +47,19 @@ const installExtensions = async () => {
 app.on('ready', async () => {
   await installExtensions();
 
-  mainWindow = new BrowserWindow({
+  const opts = {
+    width: 800,
+    height: 800,
+    minHeight: 400,
+    minWidth: 400,
     show: false,
-    width: 1024,
-    height: 728
+    frame: false
+  };
+
+  const options = Object.assign(opts, config.get('winBounds'));
+  mainWindow = new BrowserWindow(options);
+  mainWindow.on('close', () => {
+    config.set('winBounds', mainWindow.getBounds());
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);

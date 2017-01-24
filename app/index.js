@@ -5,6 +5,8 @@ import { Router, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import routes from './routes';
 import configureStore from './store/configureStore';
+
+import './assets/photon/css/photon.global.css';
 import './app.global.css';
 
 const store = configureStore();
