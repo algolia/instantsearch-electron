@@ -62,7 +62,16 @@ app.on('ready', async () => {
     config.set('winBounds', mainWindow.getBounds());
   });
 
-  mainWindow.loadURL(`file://${__dirname}/app.html`);
+  mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
+    config.set('winUrl', url);
+  });
+
+  const winUrl = config.get('winUrl');
+  if (winUrl) {
+    mainWindow.loadURL(winUrl);
+  } else {
+    mainWindow.loadURL(`file://${__dirname}/app.html`);
+  }
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
