@@ -67,7 +67,7 @@ app.on('ready', async () => {
   });
 
   const winUrl = config.get('winUrl');
-  if (winUrl) {
+  if (winUrl && winUrl.indexOf('localhost') === -1) {
     mainWindow.loadURL(winUrl);
   } else {
     mainWindow.loadURL(`file://${__dirname}/app.html`);
