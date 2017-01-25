@@ -5,7 +5,7 @@
 This boilerplate includes everything you need to create an instant search experience that runs as a native desktop application. It combines the power of [React InstantSearch](https://community.algolia.com/instantsearch.js/react/) with [Electron](http://electron.atom.io/), as well as several other hand-picked technologies to make desktop app development a breeze.
 
 ![Screenshot of an instant-search-electron app](https://dl.dropboxusercontent.com/s/v2myrfdu0ugev31/Screenshot%202017-01-25%2013.37.12.png)
-*Example application that is a faceted search for famous quotes*
+*The example application, a search for quotes faceted by nationality and author*
 
 [React InstantSearch](https://community.algolia.com/instantsearch.js/react/) is a set of components and patterns for building a powerful search experience that includes facets, filters, pagination and many other refinements. React InstantSearch is an [Algolia Community](https://community.algolia.com/) project with official support from [Algolia](https://algolia.com).
 
