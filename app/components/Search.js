@@ -13,10 +13,9 @@ import { connectCurrentRefinements } from 'react-instantsearch/connectors'
 
 import './Search.css';
 
-const algoliaAppId = 'latency';
-const algoliaIndexName = 'ikea';
-const algoliaAPIKey = '6be0576ff61c053d5f9a3225e2a90f76';
-const attributeToDisplay = 'description';
+const algoliaAppId = 'RQS4RLRZ4O';
+const algoliaIndexName = 'quotes';
+const algoliaAPIKey = '43caaae16da76e14be8cacb1e8872576';
 
 const ClearAll = connectCurrentRefinements(({ refine, items }) => {
   return (
@@ -30,9 +29,17 @@ const ClearAll = connectCurrentRefinements(({ refine, items }) => {
 })
 
 const Hit = ({ hit }) =>
-  <p className="hit">
-    <Highlight attributeName={attributeToDisplay} hit={hit} />
-  </p>;
+  <div className="hit">
+    <div className="quote-text">
+      "<Highlight attributeName="quote" hit={hit} />"
+    </div>
+    <div className="additional-info">
+      <div className="author"><Highlight attributeName="author" hit={hit} /></div>
+      <div>{hit.nationality}</div>
+      <div>{hit.deathDate || hit.deathDate}</div>
+      <div className="keywords"><Highlight attributeName="keywords" hit={hit} /></div>
+    </div>
+  </div>;
 
 class Search extends Component {
   constructor(props) {
@@ -88,7 +95,10 @@ class Search extends Component {
                     <SearchBox translations={{ placeholder: 'Search...' }} />
                   </li>
                   <li className="list-group-item">
-                    <RefinementList attributeName="colors" />
+                    <RefinementList attributeName="nationality" />
+                  </li>
+                  <li className="list-group-item">
+                    <RefinementList attributeName="author" />
                   </li>
                   <div className="ais-PoweredBy__root">
                     Powered by Algolia

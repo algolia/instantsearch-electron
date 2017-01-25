@@ -18,6 +18,9 @@ export default validate({
     }, {
       test: /\.json$/,
       loader: 'json-loader'
+    }, {
+      test: /(\.md$|license)/,
+      loader: 'null-loader'
     }]
   },
 

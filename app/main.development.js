@@ -1,7 +1,7 @@
 import { app, BrowserWindow, Menu, shell } from 'electron';
-import Config from 'electron-config';
+// import Config from 'electron-config';
 
-const config = new Config();
+// const config = new Config();
 
 let menu;
 let template;
@@ -56,22 +56,23 @@ app.on('ready', async () => {
     frame: false
   };
 
-  const options = Object.assign(opts, config.get('winBounds'));
+  // const options = Object.assign(opts, config.get('winBounds'));
+  const options = opts
   mainWindow = new BrowserWindow(options);
-  mainWindow.on('close', () => {
-    config.set('winBounds', mainWindow.getBounds());
-  });
+  // mainWindow.on('close', () => {
+  //   config.set('winBounds', mainWindow.getBounds());
+  // });
 
   mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
-    config.set('winUrl', url);
+    // config.set('winUrl', url);
   });
 
-  const winUrl = config.get('winUrl');
-  if (winUrl && winUrl.indexOf('localhost') === -1) {
-    mainWindow.loadURL(winUrl);
-  } else {
-    mainWindow.loadURL(`file://${__dirname}/app.html`);
-  }
+  // const winUrl = config.get('winUrl');
+  // if (winUrl && winUrl.indexOf('localhost') === -1) {
+  //   mainWindow.loadURL(winUrl);
+  // } else {
+  mainWindow.loadURL(`file://${__dirname}/app.html`);
+  // }
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
@@ -82,7 +83,7 @@ app.on('ready', async () => {
     mainWindow = null;
   });
 
-  if (process.env.NODE_ENV === 'development') {
+  // if (process.env.NODE_ENV === 'development') {
     mainWindow.openDevTools();
     mainWindow.webContents.on('context-menu', (e, props) => {
       const { x, y } = props;
@@ -94,7 +95,7 @@ app.on('ready', async () => {
         }
       }]).popup(mainWindow);
     });
-  }
+  // }
 
   if (process.platform === 'darwin') {
     template = [{
