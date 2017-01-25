@@ -9,7 +9,7 @@ This boilerplate includes everything you need to create an instant search experi
 
 [React InstantSearch](https://community.algolia.com/instantsearch.js/react/) is a set of components and patterns for building a powerful search experience that includes facets, filters, pagination and many other refinements. React InstantSearch is an [Algolia Community](https://community.algolia.com/) project with official support from [Algolia](https://algolia.com).
 
-This project is based on the excellent [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) project, which includes support for hot reloading in dev all the way to releases and auto-updates.
+This project is based on the excellent [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) project, which includes support for hot reloading in dev all the way to releases and auto-updates. For information about how to work with this boilerplate in detail, please see the [electron-react-boilerplate README](https://github.com/chentsulin/electron-react-boilerplate). Except for some basics, the documentation in this README will be focused on the modifications to the boilerplate to add React InstantSearch functionality.
 
 ## Install
 
