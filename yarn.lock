@@ -1961,12 +1961,12 @@ concurrently@^3.1.0:
     spawn-default-shell "^1.1.0"
     tree-kill "^1.1.0"
 
-conf@^0.11.1:
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/conf/-/conf-0.11.2.tgz#879f479267600483e502583462ca4063fc9779b2"
+conf@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/conf/-/conf-0.12.0.tgz#8498c599e2487fec703505d181c113875b8c310c"
   dependencies:
-    dot-prop "^3.0.0"
-    env-paths "^0.3.0"
+    dot-prop "^4.1.0"
+    env-paths "^1.0.0"
     mkdirp "^0.5.1"
     pkg-up "^1.0.0"
 
@@ -2336,7 +2336,11 @@ deep-eql@^0.1.3:
   dependencies:
     type-detect "0.1.1"
 
-deep-extend@~0.4.0:
+deep-equal@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
+
+deep-extend@^0.4.1, deep-extend@~0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.1.tgz#efe4113d08085f4e6f9687759810f807469e2253"
 
@@ -2501,6 +2505,12 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
+dot-prop@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.1.0.tgz#eb29eac57dfa31fda1edef50ea462ee3d38ff3ab"
+  dependencies:
+    is-obj "^1.0.0"
+
 duplexer2@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.0.2.tgz#c614dcf67e2fb14995a91711e5a617e8a60a31db"
@@ -2594,12 +2604,6 @@ electron-chromedriver@~1.4.0:
     electron-download "^3.1.0"
     extract-zip "^1.6.0"
 
-electron-config@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/electron-config/-/electron-config-0.2.1.tgz#7e12c26412d06bf3ed3896d0479df162986b95ba"
-  dependencies:
-    conf "^0.11.1"
-
 electron-debug@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/electron-debug/-/electron-debug-1.1.0.tgz#050a9c3f906fffc2492510cf8ac31d0f32a579e1"
@@ -2663,6 +2667,18 @@ electron-macos-sign@~1.4.0:
     minimist "^1.2.0"
     plist "^2.0.1"
 
+electron-settings@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/electron-settings/-/electron-settings-2.2.2.tgz#5e56f17f6d908987028e6d6ed21f86d98d20a1ff"
+  dependencies:
+    clone "^1.0.2"
+    debug "^2.2.0"
+    deep-equal "^1.0.1"
+    deep-extend "^0.4.1"
+    file-exists "^2.0.0"
+    fs-extra "^0.30.0"
+    key-path-helpers "^0.4.0"
+
 electron@^1.4.14:
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.14.tgz#e374b76ccdc432bccad9bb3ce1add453bf5648b4"
@@ -2720,9 +2736,9 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
-env-paths@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-0.3.1.tgz#c30ccfcbc30c890943dc08a85582517ef00da463"
+env-paths@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-1.0.0.tgz#4168133b42bb05c38a35b1ae4397c8298ab369e0"
 
 envify@^4.0.0:
   version "4.0.0"
@@ -3238,6 +3254,10 @@ file-entry-cache@^2.0.0:
   dependencies:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
+
+file-exists@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/file-exists/-/file-exists-2.0.0.tgz#a24150665150e62d55bc5449281d88d2b0810dca"
 
 file-loader@^0.9.0:
   version "0.9.0"
@@ -4413,6 +4433,10 @@ jsx-ast-utils@^1.0.0, jsx-ast-utils@^1.3.4:
   dependencies:
     acorn-jsx "^3.0.1"
     object-assign "^4.1.0"
+
+key-path-helpers@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/key-path-helpers/-/key-path-helpers-0.4.0.tgz#e87f6a159144adf2692e46f2a4641ce269c09119"
 
 kind-of@^3.0.2:
   version "3.1.0"

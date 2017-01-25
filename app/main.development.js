@@ -1,11 +1,21 @@
+import fs from 'fs'
+const electron = require('electron');
 import { app, BrowserWindow, Menu, shell } from 'electron';
-// import Config from 'electron-config';
-
-// const config = new Config();
 
 let menu;
 let template;
 let mainWindow = null;
+
+let configFile = electron.app.getPath('userData') + '/.instant-search-app'
+let config = {}
+if (fs.existsSync(configFile)) {
+  config = JSON.parse(fs.readFileSync(configFile))
+}
+
+function saveConfig(fields) {
+  config = { ...config, ...fields }
+  fs.writeFileSync(configFile, JSON.stringify(config))
+}
 
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support'); // eslint-disable-line
@@ -56,23 +66,22 @@ app.on('ready', async () => {
     frame: false
   };
 
-  // const options = Object.assign(opts, config.get('winBounds'));
-  const options = opts
+  const options = Object.assign(opts, config['winBounds']);
   mainWindow = new BrowserWindow(options);
-  // mainWindow.on('close', () => {
-  //   config.set('winBounds', mainWindow.getBounds());
-  // });
-
-  mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
-    // config.set('winUrl', url);
+  mainWindow.on('close', () => {
+    saveConfig({ winBounds: mainWindow.getBounds() })
   });
 
-  // const winUrl = config.get('winUrl');
-  // if (winUrl && winUrl.indexOf('localhost') === -1) {
-  //   mainWindow.loadURL(winUrl);
-  // } else {
-  mainWindow.loadURL(`file://${__dirname}/app.html`);
-  // }
+  mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
+    saveConfig({ winUrl: url })
+  });
+
+  const winUrl = config['winUrl'];
+  if (winUrl && winUrl.indexOf('localhost') === -1) {
+    mainWindow.loadURL(winUrl);
+  } else {
+    mainWindow.loadURL(`file://${__dirname}/app.html`);
+  }
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
@@ -99,9 +108,9 @@ app.on('ready', async () => {
 
   if (process.platform === 'darwin') {
     template = [{
-      label: 'Electron',
+      label: 'InstantSearch',
       submenu: [{
-        label: 'About ElectronReact',
+        label: 'About InstantSearch',
         selector: 'orderFrontStandardAboutPanel:'
       }, {
         type: 'separator'
@@ -111,7 +120,7 @@ app.on('ready', async () => {
       }, {
         type: 'separator'
       }, {
-        label: 'Hide ElectronReact',
+        label: 'Hide InstantSearch',
         accelerator: 'Command+H',
         selector: 'hide:'
       }, {

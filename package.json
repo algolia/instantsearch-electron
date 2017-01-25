@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.10.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "instant-search-electron",
+  "productName": "InstantSearch",
+  "version": "0.1.0",
+  "description": "Electron and React InstantSearch application boilerplate",
   "main": "main.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 mocha --retries 2 --compilers js:babel-register --recursive --require ./test/setup.js test/**/*.spec.js",
@@ -29,8 +29,8 @@
   },
   "browserslist": "chrome 50",
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "InstantSearch",
+    "appId": "com.algolia.InstantSearch",
     "category": "public.app-category.tools",
     "dmg": {
       "contents": [
@@ -74,16 +74,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
+    "url": "git+https://github.com/algolia/instant-search-electron.git"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
+    "name": "Josh Dzielak",
+    "email": "josh.dzielak@algolia.com",
+    "url": "https://github.com/algolia"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
+    "url": "https://github.com/algolia/instant-search-electron/issues"
   },
   "keywords": [
     "electron",
@@ -94,7 +94,7 @@
     "webpack",
     "react-hot"
   ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/algolia/instant-search-electron#readme",
   "devDependencies": {
     "asar": "^0.13.0",
     "babel-core": "^6.21.0",
@@ -162,7 +162,7 @@
     "webpack-validator": "^2.3.0"
   },
   "dependencies": {
-    "electron-config": "^0.2.1",
+    "conf": "^0.12.0",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
