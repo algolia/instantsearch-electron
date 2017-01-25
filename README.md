@@ -93,7 +93,7 @@ const Hit = ({ hit }) =>
       <div className="keywords"><Highlight attributeName="keywords" hit={hit} /></div>
     </div>
   </div>;
-	```
+```
 
 ## Source Code
 
