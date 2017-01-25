@@ -1,10 +1,10 @@
-# instant-search-electron
+# instantsearch-electron
 
 **A boilerplate for building a desktop React InstantSearch app with Electron**
 
 This boilerplate includes everything you need to create an instant search experience that runs as a native desktop application. It combines the power of [React InstantSearch](https://community.algolia.com/instantsearch.js/react/) with [Electron](http://electron.atom.io/), as well as several other hand-picked technologies to make desktop app development a breeze.
 
-![Screenshot of an instant-search-electron app](https://dl.dropboxusercontent.com/s/v2myrfdu0ugev31/Screenshot%202017-01-25%2013.37.12.png)
+![Screenshot of an instantsearch-electron app](https://dl.dropboxusercontent.com/s/v2myrfdu0ugev31/Screenshot%202017-01-25%2013.37.12.png)
 *The example application, a search for quotes faceted by nationality and author*
 
 [React InstantSearch](https://community.algolia.com/instantsearch.js/react/) is a set of components and patterns for building a powerful search experience that includes facets, filters, pagination and many other refinements. React InstantSearch is an [Algolia Community](https://community.algolia.com/) project with official support from [Algolia](https://algolia.com).
@@ -16,7 +16,7 @@ This project is based on the excellent [electron-react-boilerplate](https://gith
 First, clone the repo via git:
 
 ```bash
-git clone https://github.com/algolia/instant-search-electron.git your-project-name
+git clone https://github.com/algolia/instantsearch-electron.git your-project-name
 ```
 
 And then install dependencies.

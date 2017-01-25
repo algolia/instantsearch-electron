@@ -1,5 +1,5 @@
 {
-  "name": "instant-search-electron",
+  "name": "instantsearch-electron",
   "productName": "InstantSearch",
   "version": "0.1.0",
   "description": "Electron and React InstantSearch application boilerplate",
@@ -74,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/algolia/instant-search-electron.git"
+    "url": "git+https://github.com/algolia/instantsearch-electron.git"
   },
   "author": {
     "name": "Josh Dzielak",
@@ -83,7 +83,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/algolia/instant-search-electron/issues"
+    "url": "https://github.com/algolia/instantsearch-electron/issues"
   },
   "keywords": [
     "electron",
@@ -94,7 +94,7 @@
     "webpack",
     "react-hot"
   ],
-  "homepage": "https://github.com/algolia/instant-search-electron#readme",
+  "homepage": "https://github.com/algolia/instantsearch-electron#readme",
   "devDependencies": {
     "asar": "^0.13.0",
     "babel-core": "^6.21.0",

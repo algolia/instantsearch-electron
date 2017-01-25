@@ -6,7 +6,7 @@ let menu;
 let template;
 let mainWindow = null;
 
-let configFile = electron.app.getPath('userData') + '/.instant-search-app'
+let configFile = electron.app.getPath('userData') + '/.instantsearch-electron'
 let config = {}
 if (fs.existsSync(configFile)) {
   config = JSON.parse(fs.readFileSync(configFile))
