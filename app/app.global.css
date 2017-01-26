@@ -84,7 +84,7 @@ input.ais-SearchBox__input[type="search"] {
 
 .hit {
   border-bottom: 1px solid #ddd;
-  padding: 15px 25px;
+  padding: 15px 25px 5px;
   margin: 0;
 }
 
@@ -114,8 +114,9 @@ input.ais-SearchBox__input[type="search"] {
 }
 
 .ais-Highlight__highlighted {
-  color: purple;
+  color: red;
   font-style: normal;
+  background: #eee;
   text-decoration: underline;
 }
 
