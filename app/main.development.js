@@ -58,8 +58,8 @@ app.on('ready', async () => {
   await installExtensions();
 
   const opts = {
-    width: 800,
-    height: 800,
+    width: 960,
+    height: 680,
     minHeight: 400,
     minWidth: 400,
     show: false,

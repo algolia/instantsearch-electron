@@ -13,9 +13,13 @@ import { connectCurrentRefinements } from 'react-instantsearch/connectors'
 
 import './Search.css';
 
-const algoliaAppId = 'RQS4RLRZ4O';
+const algoliaAppId = '8H5CQDOJ8H';
 const algoliaIndexName = 'quotes';
-const algoliaAPIKey = '43caaae16da76e14be8cacb1e8872576';
+const algoliaAPIKey = 'f8360e504238b5fe0782757360782d61';
+
+function transformItems(items) {
+  return _.sortBy(items, "label")
+}
 
 const ClearAll = connectCurrentRefinements(({ refine, items }) => {
   return (
@@ -92,13 +96,13 @@ class Search extends Component {
               <div className="pane-sm sidebar">
                 <ul className="list-group">
                   <li className="list-group-header">
-                    <SearchBox translations={{ placeholder: 'Search...' }} />
+                    <SearchBox translations={{ placeholder: 'Search for quotes...' }} />
                   </li>
                   <li className="list-group-item">
-                    <RefinementList attributeName="nationality" />
+                    <RefinementList attributeName="nationality" transformItems={transformItems} />
                   </li>
                   <li className="list-group-item">
-                    <RefinementList attributeName="author" />
+                    <RefinementList attributeName="author" transformItems={transformItems} />
                   </li>
                   <div className="ais-PoweredBy__root">
                     Powered by Algolia

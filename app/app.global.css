@@ -13,8 +13,8 @@ body {
   -webkit-user-select: none;
   z-index: 10;
   overflow-y: scroll;
-  width: 240px;
-  max-width: 240px;
+  width: 260px;
+  max-width: 260px;
 }
 
 button[type=submit] {
@@ -22,6 +22,7 @@ button[type=submit] {
 }
 
 button[type=reset] {
+  display: none;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -36,13 +37,13 @@ button[disabled] {
 .after-header {
   overflow-y: scroll;
   position: fixed;
-  padding-left: 241px;
+  padding-left: 261px;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 4;
-  padding-top: 53px;
+  padding-top: 55px;
 }
 
 @media screen and (max-width: 560px) {
@@ -60,7 +61,7 @@ button[disabled] {
 }
 
 input.ais-SearchBox__input[type="search"] {
-  width: 200px;
+  width: 240px;
   background-color: white;
   outline: 0;
   color: #444;
@@ -75,6 +76,7 @@ input.ais-SearchBox__input[type="search"] {
 }
 
 .ais-PoweredBy__root {
+  display: none;
   margin: 30px 0 5px 15px;
   font-size: 12px;
   color: #aaa;
@@ -97,21 +99,22 @@ input.ais-SearchBox__input[type="search"] {
   margin-top: 12px;
   display: inline-block;
   width: 15%;
-  text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: hidden;
   white-space: nowrap;
 }
 
 .hit .additional-info div.keywords {
-  width: 45%;
+  width: 35%;
 }
 
 .hit .additional-info div.author {
-  width: 25%;
+  width: 35%;
   font-weight: bold;
 }
 
 .ais-Highlight__highlighted {
-  color: blue;
+  color: purple;
   font-style: normal;
   text-decoration: underline;
 }
