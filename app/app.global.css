@@ -114,10 +114,9 @@ input.ais-SearchBox__input[type="search"] {
 }
 
 .ais-Highlight__highlighted {
-  color: red;
   font-style: normal;
-  background: #eee;
-  text-decoration: underline;
+  color: #000;
+  background-color: #ffff00;
 }
 
 .ais-RefinementList__item label, .ais-RefinementList__item input {
