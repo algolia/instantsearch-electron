@@ -15,7 +15,7 @@ import './Search.css';
 
 const algoliaAppId = '8H5CQDOJ8H';
 const algoliaIndexName = 'quotes';
-const algoliaAPIKey = 'f8360e504238b5fe0782757360782d61';
+const algoliaAPIKey = '4209009219734b4a27f5cdc1df45863d';
 
 function transformItems(items) {
   return _.sortBy(items, "label")
